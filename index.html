@@ -1,0 +1,163 @@
+<DOCTYPE html>
+<html>
+<head> 
+  <style> 
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+  color: #000;
+  font-family: 'Caveat', cursive;
+}
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: bottom;
+}
+
+.message {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #ffccff;
+  color: #5c2e5c;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.love {
+  cursor: pointer;
+  padding: 50px;
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);  
+}
+h1,
+p {
+  margin: 0;  
+}
+p {
+  margin-top: 8px;
+}
+p.final {
+  text-align:center;
+  margin: 6px auto;
+  font-size: 38px;
+  
+  
+  white-space: nowrap;
+  overflow: hidden;    
+  
+  font-size: 46px;
+  color: #000;
+}
+
+/* Animation */
+
+ p.final{ animation: animated-text 3.7s steps(77,end) 1.3s 1 normal both,
+             animated-cursor 2000ms steps(1,end) infinite;}
+
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 690px;}
+}
+
+
+h1 {
+  font-weight: 400;
+  font-size: 3.8em;
+}
+span {
+  float: left;
+  display:block;
+  width: 100px;
+  height: 100px;
+}
+.text {
+  font-size: 5em;
+  line-height:76px;
+  width: 40px;
+}
+.heart {
+  text-indent:-99999px;
+  margin-left: -35px;
+  margin-right: -35px;
+  background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  animation: fave-heart 1s steps(28);
+  animation-iteration-count:23;
+}
+.message:hover,
+.message:focus,
+.message:active {  
+  background: #bf9fdf;
+  color:#000;
+}
+.message:hover .heart,
+.message:focus .heart,
+.message:active .heart {
+  background-position: -2800px 0;  
+  -webkit-transition: background 1s steps(28);
+  -moz-transition: background 1s steps(28);
+  -o-transition: background 1s steps(28);
+  -ms-transition: background 1s steps(28);
+  transition: background 1s steps(28);
+}
+@keyframes fave-heart {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2800px 0;
+  }
+}
+
+  </style>
+  
+ <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet"> 
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+
+<body>
+<script type="text/javascript">
+ $(document).ready(function(){
+$('.love').click(function(){
+  $(this).html('<p class="final">Желаю тебе всего, что пожелает твое<img src="https://media.giphy.com/media/26DN6ymNLCdvlTSda/giphy.gif" width="77" height="30"></p><img src="https://media.giphy.com/media/mFAqvhuSxrgbkqJdRI/giphy.gif" width="777" height="777" alt="">');
+  });
+ });
+ </script>
+  
+<div class="message">
+   <div class="love" title="">
+    <h1>С днем Рождения</h1>
+    <p>
+      <span class="text">С</span>
+      <span class="text">л</span>
+      <span class="heart">a</span>
+      <span class="text">в</span>
+      <span class="heart">а</span>
+      <span class="text">&nbsp;!</span>
+       <span class="text">^^)</span>
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
